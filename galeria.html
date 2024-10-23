@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Galería</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Nuestros Momentos Juntos</h1>
+        <div class="image-gallery">
+            <div class="image-box">
+                <img src="images/1.jpg" alt="Imagen 1" onclick="openModal(this)">
+                <p>T</p>
+            </div>
+            <div class="image-box">
+                <img src="images/2.jpg" alt="Imagen 2" onclick="openModal(this)">
+                <p>E</p>
+            </div>
+            <div class="image-box">
+                <img src="images/3.jpg" alt="Imagen 3" onclick="openModal(this)">
+                <p>A</p>
+            </div>
+            <div class="image-box">
+                <img src="images/4.jpg" alt="Imagen 4" onclick="openModal(this)">
+                <p>D</p>
+            </div>
+            <div class="image-box">
+                <img src="images/5.jpg" alt="Imagen 5" onclick="openModal(this)">
+                <p>O</p>
+            </div>
+            <div class="image-box">
+                <img src="images/6.jpg" alt="Imagen 6" onclick="openModal(this)">
+                <p>R</p>
+            </div>
+            <div class="image-box">
+                <img src="images/7.jpg" alt="Imagen 7" onclick="openModal(this)">
+                <p>O</p>
+            </div>
+            <div class="image-box">
+                <img src="images/8.jpg" alt="Imagen 8" onclick="openModal(this)">
+                <p>M</p>
+            </div>
+            <div class="image-box">
+                <img src="images/9.jpg" alt="Imagen 9" onclick="openModal(this)">
+                <p>U</p>
+            </div>
+            <div class="image-box">
+                <img src="images/10.jpg" alt="Imagen 10" onclick="openModal(this)">
+                <p>C</p>
+            </div>
+            <div class="image-box">
+                <img src="images/11.jpg" alt="Imagen 11" onclick="openModal(this)">
+                <p>H</p>
+            </div>
+            <div class="image-box">
+                <img src="images/12.jpg" alt="Imagen 12" onclick="openModal(this)">
+                <p>O</p>
+            </div>
+            <div class="image-box">
+                <img src="images/13.jpg" alt="Imagen 13" onclick="openModal(this)">
+                <p>O</p>
+            </div>
+        </div>
+
+        <!-- Modal para ver imagen ampliada -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <button onclick="window.location.href='mensaje_especiales.html';">Mensajes especiales</button>
+        <button onclick="window.location.href='index.html';">Volver a Inicio</button>
+        <button onclick="window.location.href='mensaje.html';">Volver al Mensaje</button>
+        <button onclick="window.location.href='flower.html';">Flor para TÚ</button>
+    </div>
+
+    <script src="galeria.js"></script>
+</body>
+</html>

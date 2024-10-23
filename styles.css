@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container, .gallery-container {
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    width: 90%; /* Responsividad */
+    max-width: 800px; /* Max-width para pantallas grandes */
+}
+
+h1 {
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 10px; /* Espaciado entre botones */
+}
+
+button:hover {
+    transform: scale(1.1); /* Zoom */
+    background-color: #ff3d3d; /* Color más llamativo al hacer hover */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en múltiples filas */
+    justify-content: center; /* Centra las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.image-box {
+    flex: 1 1 calc(33% - 40px); /* Cada imagen ocupa un tercio menos el espacio del gap */
+    max-width: calc(33% - 40px); /* Asegura que no exceda el tamaño */
+    margin: 10px; /* Espacio entre los elementos */
+}
+
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.image-box:hover img {
+    transform: scale(1.1); /* Zoom */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .image-box {
+        flex: 1 1 calc(45% - 40px); /* 2 columnas en tablet */
+        max-width: calc(45% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .image-box {
+        flex: 1 1 100%; /* 1 columna en móviles */
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%; /* Ocupa todo el ancho en móviles */
+        font-size: 1em;
+    }
+}
+
+/* Otros estilos como mensajes, etc. */
+.message-box {
+    background-color: #fce4ec;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.message-box:hover {
+    transform: scale(1.05); /* Pequeño zoom al pasar el cursor */
+}
+
+.container {
+    width: 90%; /* Ajustar el ancho al 90% del contenedor */
+    max-width: 800px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Espacio interno */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centra el texto */
+}
+
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Mantiene el modal en su lugar */
+    z-index: 1000; /* Se muestra sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilita el desplazamiento si es necesario */
+    background-color: rgb(0,0,0); /* Color de fondo negro */
+    background-color: rgba(0,0,0,0.9); /* Fondo negro con transparencia */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Ancho del contenido del modal */
+    max-width: 700px; /* Ancho máximo del contenido */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    height: 150px;
+}
